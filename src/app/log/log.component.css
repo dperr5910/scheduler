@@ -1,3 +1,11 @@
 button {
     width: 31.5%
 }
+
+.green {
+    background-color: green;
+}
+
+.green:hover{
+    background-color: greenyellow;
+}

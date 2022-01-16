@@ -14,7 +14,7 @@ export class LogPopupComponent implements OnInit {
   constructor(private log: LogsService) { 
     
   }
-
+  logs: taskLogItem[] = LOGS;
   ngOnInit(): void {
     this.log.toggle$.subscribe(
       change => this.display = change

@@ -16,7 +16,8 @@ export class TaskingComponent implements OnInit {
   }
 
   getTasks(): void {
-    this.tasks = this.data.getTasks();
+    this.data.getTasks()
+        .subscribe(heroes => this.tasks = heroes);
   }
 
   selected_task?: Task;

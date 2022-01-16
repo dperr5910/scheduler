@@ -1,3 +1,6 @@
 
 <p *ngIf="display == true">
-    log popup</p>
+    <li *ngFor="let log of logs">
+        {{log.task_name}}
+    </li>
+        </p>

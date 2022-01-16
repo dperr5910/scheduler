@@ -2,6 +2,8 @@ import { Component, Input, OnInit } from '@angular/core';
 import { LogComponent } from '../log/log.component';
 import { Task } from '../task';
 import { DataService } from '../data.service';
+import { TASKS } from '../tasks';
+
 @Component({
   selector: 'app-complete-task',
   templateUrl: './complete-task.component.html',
