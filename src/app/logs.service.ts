@@ -5,8 +5,6 @@ import { BehaviorSubject } from 'rxjs';
 })
 export class LogsService {
 
-
-
   toggle: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
   toggle$ = this.toggle.asObservable();
 }

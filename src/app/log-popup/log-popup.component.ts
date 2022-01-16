@@ -16,12 +16,12 @@ export class LogPopupComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    
+    this.log.toggle$.subscribe(
+      change => this.display = change
+    )
   }
 
-  toggle_text(){
+  change(){
     this.display = !this.display;
-    this.log.toggle.next(this.display);
   }
-
 }

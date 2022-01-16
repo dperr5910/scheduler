@@ -18,15 +18,13 @@ export class LogComponent implements OnInit {
   showText:boolean = false;
   
   ngOnInit(): void {
-    this.logs.toggle$.subscribe(
-      toggle => this.showText = toggle
-    )
   }
   
-  change(){
-    this.showText = !this.showText;
-  }
 
+  toggleText() {
+    this.showText = !this.showText;
+    this.logs.toggle.next(this.showText)
+  }
 
 
   logTask(task:Task){
