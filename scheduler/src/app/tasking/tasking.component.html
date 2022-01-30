@@ -1,0 +1,8 @@
+<div *ngFor="let task of tasks">
+    <div> 
+    <button (click)="onSelect(task)" [class.selected]="task === selected_task"><strong>{{task.name}}</strong> </button> || 
+    <span class="section"> <strong>Time Last Done: </strong> {{task.date | date:'shortDate'}} </span>|| 
+     every  <span *ngIf="task.frequency > 1; else single">{{task.frequency}} days</span>  <ng-template #single>1 day&nbsp;&nbsp;</ng-template> || <app-complete-task [task]="task"></app-complete-task> <app-defer-task></app-defer-task>
+    </div>
+</div>
+<app-task-popup [task]="this.selected_task"></app-task-popup>
